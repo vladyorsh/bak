@@ -21,11 +21,7 @@
 % \usepackage{amssymb} %additional math symbols
 
 \usepackage{dirtree} %directory tree visualisation
-
-% % list of acronyms
-% \usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
-% \iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
-% \makeglossaries
+\usepackage{amssymb}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % EDIT THIS
@@ -38,7 +34,7 @@
 \author{Uladzislau Yorsh} %author's name without academic degrees
 \authorWithDegrees{Uladzislau Yorsh} %author's name with academic degrees
 \supervisor{Ing. Jakub {\v Z}itn{\' y}}
-% \acknowledgements{THANKS (remove entirely in case you do not with to thank anyone)}
+\acknowledgements{Give a thank to the supervisor and family}
 \abstractEN{Rheumatoid arthritis (RA) is a systemic inflammatory autoimmune disease affecting 0.5 to 1 \% of adult people in the developed world. This disease attacks the synovium, results in swollen and painful joints and, in severe cases, leads to disability. The current approach in diagnosing and quantifying damage is a manual radiographic image inspection by a radiologist, which is generally expensive, time-consuming and subjective. Automated assessment systems are a way to overcome this problems and introduce more objectivity into radiology reports, coupled with a faster damage quantifying.
 	
 The possibility of such a system development will be shown on the example of a participation in RA2 DREAM Challenge. As a part of the competition, the system utilizing several state-of-art convolutional neural net architectures will be developed and scored on the University of Alabama at Birmingham Cheaha supercomputing system.}
@@ -60,49 +56,131 @@ Mo{\v z}nost vytvo{\v r}en{\' i} takov{\' e}ho syst{\' e}mu bude uk{\' a}z{\' a}
 \setsecnumdepth{part}
 \chapter{Introduction}
 
-Motivation and the work objectives
 
 \setsecnumdepth{all}
 \chapter{Background}
 
-Description of the techniques used
+This chapter gives a brief overview of the techniques employed to solve the task. Firstly, the supervised machine learning will be introduced. After that, the attention will be given to the Convolutional Neural Networks working principles. Finally, further training and model architecture improvement techniques will be referenced.
 
-\section{Computer Vision}
-
-CV and medicine
-	
 \section{Machine Learning}
 
-What the ML is, supervised/unsupervised learning, training data
+\textbf{Machine learning (ML)} is the study of computer algorithms that improve automatically through experience\cite{machine_learning}. This interdisciplinary study lies on the border of mathematical statistics, mathematical optimization and classic math disciplines. However, it has its own specifics related to the practical application of such algorithms, like computational efficiency and overfitting.
 
-\section{Convolutional Neural Nets}
+Machine Learning is often being seen as a subset of artificial intelligence. Indeed, the machine learning \textit{model} is being created by learning on examples instead of an explicit programming. This principle allows to approach problems being impractically or extremely difficult to program manually, such as image recognition, medical diagnosing, financial analysis and many others.
 
-Pros and cons, ConvNets, their distinction from ANNs
+To learn, a \textit{data set} is needed to experience the model on. Data set is a set of individual \textit{samples}, each sample describing one object or one situation. Depending on the data set shape and a task being solved, a machine learning methods may be divided to:
+\begin{itemize}
+	\item \textbf{Supervised learning}, which is one of the most common ML techniques, standing on the usage of a labeled data sets
+	\item \textbf{Unsupervised learning}, using unlabeled data and trying to understand their structure itself
+	\item \textbf{Reinforcement learning}, where machine learning system interacts with a certain environment and tries to understand its rules
+	\item \textbf{More exotic branches}, such as semi-supervised learning, meta-learning and other
+\end{itemize}
 
-\section{Overfitting and Regularization}
+Description of the whole variety of the machine learning approaches is out of scope of this thesis, and the attention will be given to the supervised learning techniques.
 
-What the overfitting and regularization are, smoother function example, how to combat the problem
+\section{Supervised Learning}
 
-\chapter{State-of-the-art}
+Supervised learning stands on using the labeled datasets, where the every sample is coupled with a ground truth value:
 
-Review of the modern CNNs, ideally with examples of appliance in medicine
+\[ X = ((x_1, y_1), (x_2, y_2), (x_3, y_3), \dots,(x_n, y_n)) \]
+where $x_i$ is a \textit{i\textsuperscript{th}} sample and $y_i$ is a desired model output after taking $x_i$ as an input. The goal of a supervised learning algorithm is to find such parameters of a model $f$  that will approximate the unknown underlying distribution $y_i = \hat{f}(x_i)$\cite{theoretical_ml}, or \textit{fit the training set}.
 
-\chapter{Analysis and design}
+Supervised learning tasks can be divided depending on the output values space:
+\begin{itemize}
+	\item If the set of valid outputs is finite, it's about the \textbf{classification} task ("yes/no" or category assignment)
+	\item If the set of valid outputs is ordered and large enough to consider it infinite, or numeric, it's about the \textbf{regression} task (age, price estimation)
+\end{itemize}
+\textit{Ranking} (ordering an input data) and \textit{forecasting} (prediction of subsequent elements of a certain sequence) tasks also may be distinguished, albeit they heavily intersect with the previous two.
 
-Data analysis and model designing
+To define how good the model approximates the given data, the \textit{loss function} (or simply \textit{loss}) is being defined based on the difference between the model output and the ground truth. With a proper function choice, the learning task may be defined as a loss function optimization with respect to the model parameters. This allows to employ powerful numeric optimization algorithms.
+
+The key difference between supervised learning and a straightforward numerical optimization is that optimization algorithm do care only about the model output over the training data, regardless the generalization. This may lead to the so-called \textit{overfitting} problem, when the model memorizes data instead of learning a pattern.
+
+\section{Overfitting}
+
+Low loss function value over the training data doesn't guarantee good performance over unseen samples. The plain example is a model memorizing a training data set and having a zero error on it, but yielding random output in response to the unknown input. This example graphically shows the difference between memorizing and generalizing.
+
+Ergo, \textbf{overfitting} may be defined as a case when the model fits the training data well, but performs poorly on unseen data. To detect the overfitting, one needs to test a model over data not included into the training set. Thus, not all data are being fed into the model during training, but some part is being left untouched until it comes to the estimator performance evaluation. This piece of data is often referred as a \textbf{test set}.
+
+Overfitting is a frequent situation when using powerful models, such as artificial neural nets. These models may represent a very large set of different functions including more complex than necessary to describe the distribution from which the training set was drawn.
+
+To combat overfitting, variety of methods is being applied:
+\begin{itemize}
+	\item Gathering more data
+	\item Usage of a simpler model
+	\item Regularization
+	\item Data augmentation
+\end{itemize}
+
+\section{Deep Learning}
+
+\textbf{Deep learning} is a subset of machine learning relying on deep artificial neural nets application (ANN). Word "deep" refers to the large number of layers of the neural networks being used.
+
+Deep Learning is notably different from the rest of machine learning methods, primarily due to the unique ANN capabilities. The key differences are:
+\begin{itemize}
+	\item \textbf{Bulky feature engineering is eliminated.} Classic ML algorithms heavily rely on the initial process of constructing more representative features from the raw data. This approach is problem-specific and often requires an expertise in a related domain. One of the most important (if not the most one) of the ANN advantages is a capability to infer features by themselves, simplifying the data preparation and letting the ML specialist to approach a problem without a domain-specific expertise.
+	\item \textbf{ANN architecture is not problem-specific.} Classic ML algorithm choice is mostly dependent on the task field. ANN architecture is dictated by the data amount and type instead.
+	\item \textbf{ANNs often require huge amount of data.} State-of-art neural nets contain millions of parameters.
+	\item \textbf{ANN training requires lot of computational power.} 
+\end{itemize}
+
+\section{Convolutional Neural Networks}
+
+ConvNet brief description, differences from their predcessors ANNs, training process, backprop
+
+\section{Improvements}
+
+Refer to BatchNorm, Dropout, Adam optimizer papers
+
+\chapter{Related Work}
+
+More detailed methodology description
+
+\section{Deep Learning}
+
+Deep Learning by Goodfellow et al.
+Dropout by Siravastava
+BatchNorm by Szegedy/Ioffe
+
+\section{DenseNet}
+
+DenseNet fancy picture
+
+DenseNet architecture description, optional comparison with ResNet and Inceptionv3
+
+\section{Mask R-CNN}
+
+MRCNN fancy picture
+
+MRCNN architecture description
+
+\section{Training Improvement Techniques}
+
+Transfer Learning papers
+Spatial Dropout, Specialized Dropouts for DenseNet
+
+Optional - Adam optimizer
+
+\chapter{Analysis and Design}
+
+Data numeric analysis, why regression instead of classification, data samples and model parameters counts relation
+
+Preprocess - Detect - Evaluate pipeline definition
+
+Different model arrangements
 
 \chapter{Realisation}
 
-Frameworks and implementations used
+Keras, Colab, VGG Image Annotator, hyperparameters used
 
 \chapter{Experiments}
 
-Numeric experiment results with graphs and tables
+Tables, graphs, RA2 Challenge results
 
 \setsecnumdepth{part}
 \chapter{Conclusion}
 
-Pros and cons of the approach, what could be done better
+Pros and cons, what could be done better, \dots
 
 \bibliographystyle{iso690}
 \bibliography{mybibliographyfile}
@@ -111,10 +189,11 @@ Pros and cons of the approach, what could be done better
 \appendix
 
 \chapter{Acronyms}
-% \printglossaries
+
 \begin{description}
-	\item[GUI] Graphical user interface
-	\item[XML] Extensible markup language
+	\item[ANN] Artificial Neural Network
+	\item[CNN] Convolutional Neural Network
+	\item[ML] Machine Learning
 \end{description}
 
 
