@@ -60,7 +60,9 @@ Mo{\v z}nost vytvo{\v r}en{\' i} takov{\' e}ho syst{\' e}mu bude uk{\' a}z{\' a}
 \setsecnumdepth{all}
 \chapter{Background}
 
-This chapter gives a brief overview of the techniques employed to solve the task. Firstly, the supervised machine learning will be introduced. After that, the attention will be given to the Convolutional Neural Networks working principles. Finally, further training and model architecture improvement techniques will be referenced.
+From the basic concepts of a supervised learning through the overfitting problem and its solutions to the deep learning and convolutional neural networks, this article gives a brief overview of the techniques being used.
+
+More detailed methodology is described in the next chapter. 
 
 \section{Machine Learning}
 
@@ -70,22 +72,22 @@ Machine Learning is often being seen as a subset of artificial intelligence. Ind
 
 To learn, a \textit{data set} is needed to experience the model on. Data set is a set of individual \textit{samples}, each sample describing one object or one situation. Depending on the data set shape and a task being solved, a machine learning methods may be divided to:
 \begin{itemize}
-	\item \textbf{Supervised learning}, which is one of the most common ML techniques, standing on the usage of a labeled data sets
+	\item \textbf{Supervised learning}, which is one of the most common ML techniques, standing on the usage of labeled data sets
 	\item \textbf{Unsupervised learning}, using unlabeled data and trying to understand their structure itself
 	\item \textbf{Reinforcement learning}, where machine learning system interacts with a certain environment and tries to understand its rules
 	\item \textbf{More exotic branches}, such as semi-supervised learning, meta-learning and other
 \end{itemize}
 
-Description of the whole variety of the machine learning approaches is out of scope of this thesis, and the attention will be given to the supervised learning techniques.
+Description of the whole variety of machine learning approaches is out of scope of this thesis, and the attention will be given to the supervised learning techniques.
 
 \section{Supervised Learning}
 
-Supervised learning stands on using the labeled datasets, where the every sample is coupled with a ground truth value:
+Supervised learning stands on using labeled datasets, where an every sample is coupled with a ground truth value:
 
 \[ X = ((x_1, y_1), (x_2, y_2), (x_3, y_3), \dots,(x_n, y_n)) \]
 where $x_i$ is a \textit{i\textsuperscript{th}} sample and $y_i$ is a desired model output after taking $x_i$ as an input. The goal of a supervised learning algorithm is to find such parameters of a model $f$  that will approximate the unknown underlying distribution $y_i = \hat{f}(x_i)$\cite{theoretical_ml}, or \textit{fit the training set}.
 
-Supervised learning tasks can be divided depending on the output values space:
+Supervised learning tasks can be divided further depending on the output values space:
 \begin{itemize}
 	\item If the set of valid outputs is finite, it's about the \textbf{classification} task ("yes/no" or category assignment)
 	\item If the set of valid outputs is ordered and large enough to consider it infinite, or numeric, it's about the \textbf{regression} task (age, price estimation)
@@ -102,35 +104,51 @@ Low loss function value over the training data doesn't guarantee good performanc
 
 Ergo, \textbf{overfitting} may be defined as a case when the model fits the training data well, but performs poorly on unseen data. To detect the overfitting, one needs to test a model over data not included into the training set. Thus, not all data are being fed into the model during training, but some part is being left untouched until it comes to the estimator performance evaluation. This piece of data is often referred as a \textbf{test set}.
 
-Overfitting is a frequent situation when using powerful models, such as artificial neural nets. These models may represent a very large set of different functions including more complex than necessary to describe the distribution from which the training set was drawn.
+Overfitting is a frequent situation when using powerful models, such as artificial neural nets. These models may represent a very large set of different functions including more complex than necessary to describe the distribution from which the training set was drawn. The problem is in relation with the Occam's Razor, and an overfitting occured implies violation the principle\cite{overfitting}.
 
 To combat overfitting, variety of methods is being applied:
 \begin{itemize}
-	\item Gathering more data
-	\item Usage of a simpler model
-	\item Regularization
-	\item Data augmentation
+	\item \textbf{Gathering more data.} More samples \textit{from the same distribution} means the that during training model will see more diverse and densely located data points and will be less prone to memorizing instead of pattern extraction. One should pay attention to the data quality when adding more data to the existing data set: low-quality and noisy data may \textit{decrease} the model performance.
+	\item \textbf{Usage of a simpler model.} A simpler, less representative model is less likely to learn such complex patterns as noise usually is, and is more likely to comply with the Occam's Razor.
+	\item \textbf{Regularization.} Regularization is a process of adding additional constraints to the model. This technique is densely related to the previous point---regularized model may represent lesser set of functions. Model weight norm is usually being penalized; artificial neural nets may be regularized by zeroing output of a random neuron during training. Further regularization techniques also exist.
+	\item \textbf{Data augmentation.} Data augmentation is a technique of an artificial samples number increasing without collecting more data. This involves transforming a sample without changing its semantic. A typical example is an image mirroring and rotation: if the task is to classify a cat photo as "Cat", the mirrored or rotated image still will contain the cat on it and may be appended to the training set under the same label.
 \end{itemize}
+
+It's worth to mention that \textbf{underfitting} also may occur when the model:
+\begin{itemize}
+	\item Wasn't trained enough and needs more training iterations to fit the data
+	\item \textit{Too weak} to fit the data
+\end{itemize}
+
+The second case may be illustrated by fitting the quadratic data with linear regression model. Model weakness usually appears as similar, unsatisfying and not improving performance on training and test data. The solution is straightforward: more complex model.
+
+\section{Models and Hyperparameter Tuning}
+
+Machine learning \textbf{model} is a parameterized function used to approximate and generalize the underlying data. This function may be represented by a mathematical function (linear regression), set of rules (decision trees) or more complex methematical structure (neural networks). The model itself may represent multiple specific functions depending on its parameters, and the training process is being run to automatically pick them.
+
+But there are values responsible to the \textit{shape} of model, such as a polynom degree in polynomial regression, tree depth in decision trees or an entire neural network architecture. These values cannot be learned since they have to be defined before the model instantiation, and should be picked by a machine learning specialist. These values are called \textbf{hyperparameters} and the process of picking the right hyperparameter value is called \textit{tuning}.
+
+Hyperparameter cannot be tuned on the same data the model performance is being estimated on. By picking the best hyperparameter after testing it on a certain data set one adapts the model to this specific piece of data, and the model performance on it will be biased towards the better result. Thus, one has to tune hyperparameter on a \textbf{validation} data set disjoint from training and test sets.
 
 \section{Deep Learning}
 
-\textbf{Deep learning} is a subset of machine learning relying on deep artificial neural nets application (ANN). Word "deep" refers to the large number of layers of the neural networks being used.
+\textbf{Deep learning} is a subset of machine learning relying on deep artificial neural networks application (ANN). Word "deep" refers to the large number of hidden layers of the neural networks being used.
 
 Deep Learning is notably different from the rest of machine learning methods, primarily due to the unique ANN capabilities. The key differences are:
 \begin{itemize}
 	\item \textbf{Bulky feature engineering is eliminated.} Classic ML algorithms heavily rely on the initial process of constructing more representative features from the raw data. This approach is problem-specific and often requires an expertise in a related domain. One of the most important (if not the most one) of the ANN advantages is a capability to infer features by themselves, simplifying the data preparation and letting the ML specialist to approach a problem without a domain-specific expertise.
 	\item \textbf{ANN architecture is not problem-specific.} Classic ML algorithm choice is mostly dependent on the task field. ANN architecture is dictated by the data amount and type instead.
-	\item \textbf{ANNs often require huge amount of data.} State-of-art neural nets contain millions of parameters.
-	\item \textbf{ANN training requires lot of computational power.} 
-\end{itemize}
+	\item \textbf{ANNs often require huge amount of data.} State-of-art neural nets contain millions of parameters and tend to overfit very easily. This disadvantage may be partially compensated by \textbf{transfer learning} mentioned below.
+	\item \textbf{ANN training requires a lot of computational power.} ANNs are based on multiple matrix multiplications, which are RAM-hungry and are best done by GPU. This disadvantage limits ANN combination with such time-consuming techniques as cross-validation and ensembling.
+\end{itemize} 
 
 \section{Convolutional Neural Networks}
 
 ConvNet brief description, differences from their predcessors ANNs, training process, backprop
 
-\section{Improvements}
+\section{Performance Improvement Techniques}
 
-Refer to BatchNorm, Dropout, Adam optimizer papers
+Refer to Ensembling, Cross-validation, BatchNorm, Dropout, Adam optimizer papers
 
 \chapter{Related Work}
 
