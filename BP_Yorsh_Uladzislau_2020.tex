@@ -104,13 +104,15 @@ Low loss function value over the training data doesn't guarantee good performanc
 
 Ergo, \textbf{overfitting} may be defined as a case when the model fits the training data well, but performs poorly on unseen data. To detect the overfitting, one needs to test a model over data not included into the training set. Thus, not all data are being fed into the model during training, but some part is being left untouched until it comes to the estimator performance evaluation. This piece of data is often referred as a \textbf{test set}.
 
-Overfitting is a frequent situation when using powerful models, such as artificial neural nets. These models may represent a very large set of different functions including more complex than necessary to describe the distribution from which the training set was drawn. The problem is in relation with the Occam's Razor, and an overfitting occured implies violation the principle\cite{overfitting}.
+Overfitting is a frequent situation when using powerful models, such as artificial neural nets. These models may represent a very large set of different functions including more complex than necessary to describe the distribution from which the training set was drawn. The problem is in dense relation with the Occam's Razor, and an overfitting occured implies violation the principle\cite{overfitting}.
 
 To combat overfitting, variety of methods is being applied:
 \begin{itemize}
-	\item \textbf{Gathering more data.} More samples \textit{from the same distribution} means the that during training model will see more diverse and densely located data points and will be less prone to memorizing instead of pattern extraction. One should pay attention to the data quality when adding more data to the existing data set: low-quality and noisy data may \textit{decrease} the model performance.
-	\item \textbf{Usage of a simpler model.} A simpler, less representative model is less likely to learn such complex patterns as noise usually is, and is more likely to comply with the Occam's Razor.
-	\item \textbf{Regularization.} Regularization is a process of adding additional constraints to the model. This technique is densely related to the previous point---regularized model may represent lesser set of functions. Model weight norm is usually being penalized; artificial neural nets may be regularized by zeroing output of a random neuron during training. Further regularization techniques also exist.
+	\item \textbf{Gathering more data.} More samples \textit{from the same distribution} means that during training the model will see more diverse and densely located data points and will be less prone to memorizing instead of pattern extraction. One should pay attention to the data quality while collecting them: low-quality and noisy data may \textit{decrease} the model performance.
+	\item \textbf{Usage of a simpler model.} It's possible to design a model powerful enough to explain data, but too weak to yield an overcomplicated function, since noise's pattern is significantly more complex.
+	\item \textbf{Regularization.} Regularization is a process of adding additional constraints to the model. This technique is densely related to the previous point---regularized model's representative power is being limited to fit the data but not the noise.
+	
+	Model weight norm is usually being penalized; artificial neural nets may be regularized by zeroing output of a random neuron during training (so-called \textit{dropout}). Further regularization techniques also exist.
 	\item \textbf{Data augmentation.} Data augmentation is a technique of an artificial samples number increasing without collecting more data. This involves transforming a sample without changing its semantic. A typical example is an image mirroring and rotation: if the task is to classify a cat photo as "Cat", the mirrored or rotated image still will contain the cat on it and may be appended to the training set under the same label.
 \end{itemize}
 
@@ -120,74 +122,139 @@ It's worth to mention that \textbf{underfitting} also may occur when the model:
 	\item \textit{Too weak} to fit the data
 \end{itemize}
 
-The second case may be illustrated by fitting the quadratic data with linear regression model. Model weakness usually appears as similar, unsatisfying and not improving performance on training and test data. The solution is straightforward: more complex model.
+The second case may be illustrated by fitting the quadratic data with linear regression model. Model weakness usually appears as similar, unsatisfying and not improving performance on both training and test data. The solution is straightforward: more complex model.
 
 \section{Models and Hyperparameter Tuning}
 
 Machine learning \textbf{model} is a parameterized function used to approximate and generalize the underlying data. This function may be represented by a mathematical function (linear regression), set of rules (decision trees) or more complex methematical structure (neural networks). The model itself may represent multiple specific functions depending on its parameters, and the training process is being run to automatically pick them.
 
-But there are values responsible to the \textit{shape} of model, such as a polynom degree in polynomial regression, tree depth in decision trees or an entire neural network architecture. These values cannot be learned since they have to be defined before the model instantiation, and should be picked by a machine learning specialist. These values are called \textbf{hyperparameters} and the process of picking the right hyperparameter value is called \textit{tuning}.
+But there are values responsible to the \textit{shape} of model, such as a polynom degree in polynomial regression, tree depth in decision trees or an entire neural network architecture. These values cannot be learned since they have to be defined before the model instantiation, and should be picked by a machine learning specialist. These values are called \textbf{hyperparameters} and the process of picking the right hyperparameter value is called \textit{tuning}. Tuning stands on analysing the model performance on unseen data after training.
 
-Hyperparameter cannot be tuned on the same data the model performance is being estimated on. By picking the best hyperparameter after testing it on a certain data set one adapts the model to this specific piece of data, and the model performance on it will be biased towards the better result. Thus, one has to tune hyperparameter on a \textbf{validation} data set disjoint from training and test sets.
+Hyperparameters cannot be tuned on the same data the model performance is being estimated on. By picking the best hyperparameter after testing it on a certain data set one adapts the model to this specific piece of data, and the model performance on it will be biased towards the better result. Thus, one has to tune hyperparameter on a \textbf{validation} data set disjoint from training and test sets.
+
+Summary:
+\begin{itemize}
+	\item On the \textbf{training} set the model is being trained
+	\item By performance on the \textbf{validation} set the best model is being chosen
+	\item The model performance on the \textbf{test} set is an unbiased estimation of it's performance in practice
+\end{itemize}
 
 \section{Deep Learning}
 
-\textbf{Deep learning} is a subset of machine learning relying on deep artificial neural networks application (ANN). Word "deep" refers to the large number of hidden layers of the neural networks being used.
+\textbf{Deep learning} is a subset of machine learning relying on deep artificial neural networks (ANN) application. Word "deep" refers to the large number of hidden layers of the neural networks being used.
 
 Deep Learning is notably different from the rest of machine learning methods, primarily due to the unique ANN capabilities. The key differences are:
 \begin{itemize}
-	\item \textbf{Bulky feature engineering is eliminated.} Classic ML algorithms heavily rely on the initial process of constructing more representative features from the raw data. This approach is problem-specific and often requires an expertise in a related domain. One of the most important (if not the most one) of the ANN advantages is a capability to infer features by themselves, simplifying the data preparation and letting the ML specialist to approach a problem without a domain-specific expertise.
-	\item \textbf{ANN architecture is not problem-specific.} Classic ML algorithm choice is mostly dependent on the task field. ANN architecture is dictated by the data amount and type instead.
-	\item \textbf{ANNs often require huge amount of data.} State-of-art neural nets contain millions of parameters and tend to overfit very easily. This disadvantage may be partially compensated by \textbf{transfer learning} mentioned below.
-	\item \textbf{ANN training requires a lot of computational power.} ANNs are based on multiple matrix multiplications, which are RAM-hungry and are best done by GPU. This disadvantage limits ANN combination with such time-consuming techniques as cross-validation and ensembling.
+	\item \textbf{No feature engineering required.} Classic ML algorithms heavily rely on the initial process of constructing more representative features from the raw data. This approach is problem-specific and often requires an expertise in a related domain. One of the most important (if not the most one) of the ANN advantages is a capability to infer high-level features by themselves, simplifying the data preparation and letting the ML specialist to approach a problem without a domain-specific expertise.
+	
+	\item \textbf{DL approach can produce end-to-end solutions.} Classic ML approach requires a problem breakdown to several subtasks which are then being individually approached with different models and manual feature engineering. Deep Learning allows to produce a solid model able to produce output directly after being fed with data. This not only simplifies the model development, but also ensures that the model is being trained as a whole maximizing the interaction between its specialized blocks.
+	
+	\item \textbf{ANNs often can be transferred to solve similar problem.} An already trained ANN can be used as a baseline for an another task solution. By partial or full re-training this ANN on a new data the better and faster result may be achieved. One of the most common applications of the \textit{transfer leraning} is an image recognition.
+	
+	\item \textbf{ANNs often require huge amount of data for training...}
+	This disadvantage is related primarily to classification/regression ANNs, since the only accompanying information they get with a sample during training is a single value. If the model gets an image with a "Cat" label, it has to infer by itself what is needed to classify this image as "Cat". Since most state-of-art deep learning models got millions of parameters, this requires proportional data amount to not overfit.
+	
+	\item \textbf{...but sometimes they not.} At the same time, several ANN architectures (semantic segmentation, object detection, \dots) during training recieve a ground truth map instad of a label. This map contains a target value \textit{for an every pixel}. Such amount of related information may be enough to train a model from scratch on tens of images.
+
+	\item \textbf{ANN training requires a lot of computational power.} ANNs are based on numerous matrix multiplications, which are memory-hungry and require specialized hardware such as GPU or TPU for speeding up. This disadvantage limits ANN combination with several time-consuming techniques like cross-validation or ensembling.
+	
+	\item \textbf{ANNs are hard to interpret.} Another major advantage of non-Deep Learning ML approach and the reason why it still dominates in several sectors. While it's pretty easy to interpret and visualize linear regression models or decision trees, ANN makes its decisions through numerous matrix multiplications which are hard to depict graphically and explain in human terms.
+	
+	Neural network interpretability is a wide field for research.
 \end{itemize} 
 
 \section{Convolutional Neural Networks}
 
-ConvNet brief description, differences from their predcessors ANNs, training process, backprop
+
 
 \section{Performance Improvement Techniques}
 
 Refer to Ensembling, Cross-validation, BatchNorm, Dropout, Adam optimizer papers
 
-\chapter{Related Work}
+\chapter{State of the Art}
 
 More detailed methodology description
 
-\section{Deep Learning}
-
-Deep Learning by Goodfellow et al.
-Dropout by Siravastava
-BatchNorm by Szegedy/Ioffe
-
 \section{DenseNet}
 
-DenseNet fancy picture
+DENSENET FANCY PICTURE
 
-DenseNet architecture description, optional comparison with ResNet and Inceptionv3
+ARCHITECTURE DESCTIPTION
+
+COMPARISON WITH RESNET / INCEPTIONV3
 
 \section{Mask R-CNN}
 
-MRCNN fancy picture
+MRCNN FANCY PICTURE
 
-MRCNN architecture description
+MRCNN ARCHITECTURE DESCRIPTION
 
 \section{Training Improvement Techniques}
+TRANSFER LEARNING
 
-Transfer Learning papers
-Spatial Dropout, Specialized Dropouts for DenseNet
+SPECIALIZED DROPOUTS FOR DENSENET
 
 Optional - Adam optimizer
 
 \chapter{Analysis and Design}
 
-Data numeric analysis, why regression instead of classification, data samples and model parameters counts relation
+This chapter describes an approach used to solve the related task step-by-step. The problem will be decomposed to the several subtasks, and for each of them---from the data preprocessing to the joint scoring itself---the solution will be designed using the methodology described in the previous two chapters.
 
-Preprocess - Detect - Evaluate pipeline definition
+The exact realization will be discussed in the next chapter.
 
-Different model arrangements
+\section{Task Recapitulation}
 
-\chapter{Realisation}
+The goal of the RA2 Challenge is to design a system able to perform a joint damage assessment by the Sharp/van der Heijde (SvH) method. The assessment system stands on examining selected joints of the hands, wrist and feet, which are the typical RA targets. The system considers the joint's \textbf{erosion} (physical damage of the joint's bones) and the joint's \textbf{narrowing} (reduction of the free space between joint's bones). Each erosion and narrowing region is being scored in range from 0 to 5 and from 0 to 4 respectively. The regions involved are shown on the figures; the whole scoring requires 86 examinations yielding the total score in range from 0 to 448.
+
+Note that feet erosion scores are considered per \textit{side} of joint, not the joint itself; the actual feet joint erosion score range is from 0 to 10.
+
+The challenge consists of 3 subchallenges:
+\begin{itemize}
+	\item \textbf{Subchallenge 1:} Predict overall RA damage. Solution assessment metric: weighted MAE
+	\item \textbf{Subchallenge 2:} Predict joint space narrowing jointwise. Solution assessment metric: weighted RMSE
+	\item \textbf{Subchallenge 3:} Predict joint erosion jointwise. Solution assessment metric: weighted RMSE
+\end{itemize}
+
+It's worth to mention that metrics' weights were not publicly available during the challenge.
+
+The solution must be dockerized, pushed to the challenge repository and submitted through the form; submissions are limited to the 3 per round which is typically a week long. The "Fast lane" unlimited submissions are provided to run the container on a small subset of data and ensure it yields the valid result.
+
+\section{Dataset Analysis}
+The data consists of CLEAR and TETRAD studies and contains left hand, right hand, left foot and right foot images of 368 patients, 1472 images in total. The only labels available are 86 SvH scores and their erosion/narrowing/total sums per patient.
+
+The visual inspection revealed that images vary in size, contrast and sharpness. All images are oriented similarly per limb. Among the foreign objects 2 wrist bone plates and several rings were noted.
+
+The label analysis revealed that \textbf{only 14\% of narrowing and 9\% of erosion scores are non-zero}.
+
+
+
+
+INSERT LABEL DISTRIBUTION PLOT THERE
+
+
+
+
+\section{Joint Extraction}
+
+The goal of the related work is to design a model for a joint-by-joint damage assessment. Since every joint is being represented by a relatively small fraction of the image's area, no meaningful result is expected after feeding the current amount of data to the model directly. Thus, to achieve the best result it's needed to extract the joint itself from the original image.
+
+To solve this subtask a pre-trained instance segmentation model was employed.
+
+The next step is to 
+
+DATA SPLIT
+
+DATASET PREPARATION
+
+DETECTOR TRAINING
+
+ESTIMATOR DESIGN
+
+REGULARIZATION
+
+
+
+\chapter{Realization Details}
 
 Keras, Colab, VGG Image Annotator, hyperparameters used
 
@@ -212,6 +279,9 @@ Pros and cons, what could be done better, \dots
 	\item[ANN] Artificial Neural Network
 	\item[CNN] Convolutional Neural Network
 	\item[ML] Machine Learning
+	\item[SvH]
+	\item[MAE]
+	\item[MSE]
 \end{description}
 
 
