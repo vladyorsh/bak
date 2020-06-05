@@ -27,5 +27,5 @@ How to build the docker container:
 According to the wiki pages, the scoring container will be publically available after the challenge end.
 
 Notes about notebooks:
-- Public data sets were changed multiple times during the challenge. Notebooks dedicated to detection models refer to some distinct files, which may absent in new publicly available sets. If the certain file is missing, remove it from 'force_train' list in the notebook.
-- Detection models are trained on aligned images (wight right limb images mirrored). If not, they achieve worse results.
+- Public data sets were changed multiple times during the challenge. Notebooks dedicated to detection models refer to some distinct files, which may be absent in new publicly available sets. If a certain file is missing, remove it from the 'force_train' list in the notebook.
+- Detection models notebooks refer to the aligned data sets (with right images flipped), not to the original ones.
