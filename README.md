@@ -12,7 +12,7 @@ This repository includes:
 
 What this repository does not include:
 - The data. They have to be downloaded from the RA2 Challange page by a registered user
-- The pre-trained detection models for the docker container. They can be downloaded from the faculty Google Drive: [will be available after uploading]
+- The pre-trained detection models for the docker container. They can be downloaded from the CVUT FIT faculty Google Drive: [Link](https://drive.google.com/open?id=1JIwfKTvv-ftfmyQbhgtUjo-wNpK-LfiR)
 
 How to get the data:
 - First of all, you have to be registered for the RA2 Challenge: [Link](https://www.synapse.org/#!Synapse:syn20545111/wiki/594083 "Link")
