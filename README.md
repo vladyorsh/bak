@@ -25,3 +25,7 @@ How to build the docker container:
 - Follow the instructions at the RA2 Challenge wiki: [Link](https://www.synapse.org/#!Synapse:syn20545111/wiki/597249 "Link"). Proceed from point 4.
 
 According to the wiki pages, the scoring container will be publically available after the challenge end.
+
+Notes about notebooks:
+- Public data sets were changed multiple times during the challenge. Notebooks dedicated to detection models refer to some distinct files, which may absent in new publicly available sets. If the certain file is missing, remove it from 'force_train' list in the notebook.
+- Detection models are trained on aligned images (wight right limb images mirrored). If not, they achieve worse results.
