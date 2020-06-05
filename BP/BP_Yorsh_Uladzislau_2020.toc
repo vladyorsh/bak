@@ -1,0 +1,75 @@
+\changetocdepth {3}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {czech}{}
+\babel@toc {english}{}
+\babel@toc {czech}{}
+\babel@toc {english}{}
+\contentsline {chapter}{Introduction}{1}{chapter*.7}%
+\contentsline {chapter}{\chapternumberline {1}Background}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Machine Learning}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}What is Machine Learning?}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Supervised Learning}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Overfitting}{5}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Models and Hyperparameter Tuning}{7}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Deep Learning}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}What is Deep Learning?}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Artificial Neural Networks}{9}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Artificial Neuron as a Model}{9}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Feedforward Neural Networks}{11}{subsubsection.1.2.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.3}Backpropagation}{12}{subsubsection.1.2.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.2.4}Activation Functions}{17}{subsubsection.1.2.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.2.5}Dropout}{18}{subsubsection.1.2.2.5}%
+\contentsline {subsection}{\numberline {1.2.3}Convolutional Neural Networks}{19}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}Motivation}{19}{subsubsection.1.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Convolutional Layer}{20}{subsubsection.1.2.3.2}%
+\contentsline {subsubsection}{\numberline {1.2.3.3}Another New Building Blocks}{22}{subsubsection.1.2.3.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.4}Implementation and Backprop}{23}{subsubsection.1.2.3.4}%
+\contentsline {section}{\numberline {1.3}Common Performance Improvement Techniques}{24}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Regularization}{24}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Cross-Validation}{25}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Model Ensembling}{25}{subsection.1.3.3}%
+\contentsline {chapter}{\chapternumberline {2}State of the Art}{27}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Batch Normalization}{27}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Motivation}{27}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Problem Addressing}{28}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Pros and Cons}{29}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Adam Optimizer}{30}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Momentum and Nesterov}{30}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Adaptive Methods}{31}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Adam}{32}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Adam Features}{33}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Deep Residual Networks}{33}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Densely Connected Convolutional Networks}{35}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Motivation}{35}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Key Architecture Elements}{36}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Pros and Cons}{37}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Specialized Dropouts}{37}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Mask R-CNN}{38}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Purpose}{38}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Predecessors}{39}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}Regions with CNN}{39}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}Fast R-CNN}{40}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}Faster R-CNN}{41}{subsubsection.2.5.2.3}%
+\contentsline {subsection}{\numberline {2.5.3}Architecture Details}{43}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}RoI Align}{43}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Mask Predictor Head}{45}{subsubsection.2.5.3.2}%
+\contentsline {chapter}{\chapternumberline {3}Practial Part}{47}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Task Recapitulation}{47}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dataset Overview}{48}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Approach}{49}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Joint Extraction}{49}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Data Preparation}{50}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Training and Results}{51}{subsubsection.3.3.1.2}%
+\contentsline {subsection}{\numberline {3.3.2}Damage Assessment}{52}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Data Preparation}{52}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}The Model}{53}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Training and Results}{54}{subsubsection.3.3.2.3}%
+\contentsline {section}{\numberline {3.4}Discussion}{55}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Joint Extraction}{56}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Damage Assessment}{57}{subsection.3.4.2}%
+\contentsline {chapter}{Conclusion}{61}{chapter*.42}%
+\contentsline {chapter}{Bibliography}{63}{chapter*.43}%
+\contentsline {appendix}{\chapternumberline {A}Acronyms}{69}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}Example Training Plot}{71}{appendix.B}%
+\contentsline {appendix}{\chapternumberline {C}Contents of enclosed CD}{73}{appendix.C}%

@@ -1,0 +1,321 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand*{\memsetcounter}[2]{}
+\bbl@cs{beforestart}
+\catcode `"\active 
+\catcode `-\active 
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\changetocdepth  {3}}
+\babel@aux{english}{}
+\babel@aux{english}{}
+\babel@aux{czech}{}
+\babel@aux{english}{}
+\babel@aux{czech}{}
+\babel@aux{english}{}
+\citation{cs231n}
+\citation{nn-svg}
+\citation{dropout}
+\citation{vgg}
+\citation{batchnorm}
+\citation{going_deeper}
+\citation{resnet}
+\citation{resnet}
+\citation{densenet}
+\citation{splash_of_color}
+\citation{rcnn}
+\citation{fast_rcnn}
+\citation{faster_rcnn}
+\citation{mask_rcnn}
+\citation{bilinear_interpolation}
+\citation{mask_rcnn}
+\citation{feature_pyramid_nets}
+\citation{mask_rcnn}
+\citation{ra_ultrasound}
+\citation{ra_computer_aided}
+\citation{dl_ra}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{Introduction}{1}{chapter*.7}\protected@file@percent }
+\citation{machine_learning}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {1}Background}{3}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Machine Learning}{3}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}What is Machine Learning?}{3}{subsection.1.1.1}\protected@file@percent }
+\citation{theoretical_ml}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Supervised Learning}{4}{subsection.1.1.2}\protected@file@percent }
+\citation{overfitting}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Overfitting}{5}{subsection.1.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A toy overfit example. Red points represent two-dimensional linear data with some noise. While linear model explains the data not perfectly, it achieves a good generalization. The more powerful seventh degree polynomial model fitted the data ideally, but failed to generalize. \relax }}{5}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical loss-by-iteration training graph. The blue graph represents training loss, which monotonically (in practice with some oscillation) decreases the more training iterations the model passed. The yellow graph represents validation loss, which starts to grow at the same time the model starts to overfit\relax }}{6}{figure.caption.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.4}Models and Hyperparameter Tuning}{7}{subsection.1.1.4}\protected@file@percent }
+\citation{how_transferable}
+\citation{unet}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Deep Learning}{8}{section.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}What is Deep Learning?}{8}{subsection.1.2.1}\protected@file@percent }
+\citation{simonyan2013deep}
+\citation{fan2020interpretability}
+\citation{McCulloch43}
+\citation{hebb-organization-of-behavior-1949}
+\citation{cs231n}
+\citation{cs231n}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Artificial Neural Networks}{9}{subsection.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.1}Artificial Neuron as a Model}{9}{subsubsection.1.2.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces A comparison of a biological neuron (top) and its matematical model (bottom). Pictures taken from the CS231n course\cite  {cs231n}.\relax }}{10}{figure.caption.10}\protected@file@percent }
+\citation{nn_zoo}
+\citation{nn-svg}
+\citation{nn-svg}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.2}Feedforward Neural Networks}{11}{subsubsection.1.2.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Example of a FFNN with two hidden layers. Visualized using NN-SVG\cite  {nn-svg}.\relax }}{11}{figure.caption.11}\protected@file@percent }
+\citation{softmax}
+\citation{universal_approx_wiki}
+\citation{nndl_universal_approx}
+\citation{chain_rule}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.3}Backpropagation}{12}{subsubsection.1.2.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Gradient descent visualization. The two-dimensional variable space represents model parameter values; $z$-axis is the training loss function value. Starting at some point (pre-trained or randomly initialized), the training algorithm computes the gradient at this point, multiplies it by the learning rate and subtracts it, yielding the new point with the lower loss function value. In case of a real ANN, a variable space is being million-dimensional with a non-trivial relief.\relax }}{13}{figure.caption.12}\protected@file@percent }
+\citation{chain_rule}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Low and high learning rate toy examples. A too low LR value (above) slows the training down and sometimes may lead to being stuck in a shallow local minimum (not illustrated). A too high LR value (below) leads to several another problems, one of which is overshooting loss minima.\relax }}{14}{figure.caption.13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Example computational graph of a single neuron with the sigmoid activation function. On the forward pass the neuron receives inputs and computes an output. During the backward pass the differentials of all nodes are being numerically computed using the forward pass values and gradients of their nodes-successors. The computational graph receives an initial gradient value of 1.0, since this is the derivative of the computational graph output by the computational graph's last node output (which are the same).\relax }}{15}{figure.caption.14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Matrix form of the FFNN layer computational graph with the sigmoid activation function, where $\nabla F$ is a global gradient by the layer's output. The "$+$" node is defined as "add the $b$ vector to the every $XW$ row". $\nabla \sigma '$ therefore means mean value of $\nabla \sigma $ rows---a sum of $b$ gradients scaled down to be not dependent on the input batch size.\relax }}{16}{figure.caption.15}\protected@file@percent }
+\citation{sparse_rectifier}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.4}Activation Functions}{17}{subsubsection.1.2.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Three common activation functions illustrated. While logistic sigmoid and $\qopname  \relax o{tanh}$ functions saturate in both directions, ReLU saturates in only one. ReLU is also easier to compute both during forward and backward pass.\relax }}{17}{figure.caption.16}\protected@file@percent }
+\citation{wiki_relu}
+\citation{lecun_generalization}
+\citation{dropout}
+\citation{dropout}
+\citation{dropout}
+\citation{LeCunBoserDenkerEtAl89}
+\citation{hubel1962receptive}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.5}Dropout}{18}{subsubsection.1.2.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Illustration taken from the Dropout paper\cite  {dropout}. During training time only fraction of ANN connections is being subsampled and properly rescaled. During test time neurons see all their inputs. One of the proposed Dropout interpretations says, that during the test time different models sampled from the original one are being averaged.\relax }}{19}{figure.caption.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Convolutional Neural Networks}{19}{subsection.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.1}Motivation}{19}{subsubsection.1.2.3.1}\protected@file@percent }
+\citation{zfnet}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.2}Convolutional Layer}{20}{subsubsection.1.2.3.2}\protected@file@percent }
+\citation{vgg}
+\citation{vgg}
+\citation{vgg}
+\citation{zfnet}
+\citation{alexnet}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces VGG16\cite  {vgg} architecture illustrated. Taking a $224 \times 224 \times 3$ image as input, by an alternating application of $3 \times 3$ filters, non-linearities and MaxPools the model gradually shrinks the data spatially, adding more and more of a high-level information and stacking it along the depth axis. The later layers operate a high-level information, relying on features extracted by previous layers and capturing a significant spatial context.\relax }}{21}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.3}Another New Building Blocks}{22}{subsubsection.1.2.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces Pooling layer illustrated. The $4 \times 4$ grid represents an image, while $2 \times 2$ grids represent Max (top) and Average (bottom) pooling operation results. Precisely, max/average $2 \times 2$ pooling with stride 2.\relax }}{22}{figure.caption.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.4}Implementation and Backprop}{23}{subsubsection.1.2.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces im2col possible implementation illustrated. The arrows denote im2col operation and its inversion.\relax }}{23}{figure.caption.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Common Performance Improvement Techniques}{24}{section.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Regularization}{24}{subsection.1.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces Regularization illustrated by the polynomial regression example. The blue graph shows 7-degree polynomial with no regularization; the orange one is being yielded by the similar model, but with an added $L_2$ regularizer. The second function is smoother, and intended to generalize better. Note, that it fits the training data worse.\relax }}{24}{figure.caption.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Cross-Validation}{25}{subsection.1.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces 5-fold cross-validation illustrated.\relax }}{25}{figure.caption.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Model Ensembling}{25}{subsection.1.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Model averaging illustrated. By averaging several models a smoother function may be obtained.\relax }}{26}{figure.caption.23}\protected@file@percent }
+\citation{covariate_shift}
+\citation{batchnorm}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {2}State of the Art}{27}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Batch Normalization}{27}{section.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Motivation}{27}{subsection.2.1.1}\protected@file@percent }
+\citation{exploding_gradient}
+\citation{xavier_init}
+\citation{he_init}
+\citation{efficient_backprop}
+\citation{dropout}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Problem Addressing}{28}{subsection.2.1.2}\protected@file@percent }
+\citation{batchnorm}
+\citation{going_deeper}
+\citation{batchnorm}
+\citation{going_deeper}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of BN-accelerated models with the baseline taken from the BN paper\cite  {batchnorm}. The baseline model was the Inception\cite  {going_deeper}; BN-baseline is the Inception with BN before each non-linearity; BN-x5 is the BN-baseline modified to accelerate training (no dropout, reduced $L_2$ regularization, $\times $5 larger initial LR, more aggressive LR decay, etc.); BN-x30 is BN-x5, but with LR increased by factor 30 instead of 5; BN-x5-Sigmoid is the BN-x5 but with ReLUs replaced by sigmoid non-linearity. BatchNormalized models show significant boost both in terms of training speed and accuracy relative to the baseline model.\relax }}{29}{figure.caption.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Pros and Cons}{29}{subsection.2.1.3}\protected@file@percent }
+\citation{learning_representations}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Adam Optimizer}{30}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Momentum and Nesterov}{30}{subsection.2.2.1}\protected@file@percent }
+\citation{nesterov}
+\citation{adagrad}
+\citation{rmsprop}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Adaptive Methods}{31}{subsection.2.2.2}\protected@file@percent }
+\citation{adam}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Adam}{32}{subsection.2.2.3}\protected@file@percent }
+\citation{resnet}
+\citation{resnet}
+\citation{alexnet}
+\citation{vgg}
+\citation{going_deeper}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Adam Features}{33}{subsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Deep Residual Networks}{33}{section.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Degradation problem illustrated, plots taken from the paper\cite  {resnet}. The plots clarify that the problem isn't related to overfitting, since deeper models are harder to optimize for training data.\relax }}{33}{figure.caption.25}\protected@file@percent }
+\citation{resnet}
+\citation{resnet}
+\citation{resnet}
+\citation{densenet}
+\citation{densenet}
+\citation{densenet}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Comparison of two CNN pairs---plain 18-layer, plain 34-layer and their residual variants. Plot is taken from the paper\cite  {resnet}. Skip connections bypass every two layers. While providing no additional parameters, residual networks show better results.\relax }}{34}{figure.caption.26}\protected@file@percent }
+\citation{resnet}
+\citation{stochastic_depth}
+\citation{highway_net}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces A 5-layer dense block with growth rate = 4. Picture from the DenseNet paper\cite  {densenet}.\relax }}{35}{figure.caption.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Densely Connected Convolutional Networks}{35}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Motivation}{35}{subsection.2.4.1}\protected@file@percent }
+\citation{densenet}
+\citation{identity_mappings}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Key Architecture Elements}{36}{subsection.2.4.2}\protected@file@percent }
+\citation{densenet}
+\citation{specialized_dropouts}
+\citation{densenet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Pros and Cons}{37}{subsection.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Specialized Dropouts}{37}{subsection.2.4.4}\protected@file@percent }
+\citation{splash_of_color}
+\citation{splash_of_color}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Mask R-CNN}{38}{section.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Purpose}{38}{subsection.2.5.1}\protected@file@percent }
+\citation{rcnn}
+\citation{rcnn}
+\citation{rcnn}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces The four CV tasks illustrated. Picture from\cite  {splash_of_color}.\relax }}{39}{figure.caption.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Predecessors}{39}{subsection.2.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.1}Regions with CNN}{39}{subsubsection.2.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The Regions with CNN scheme. The algorithm extracts region proposals from an original image, feeds them to CNN and classifies them by multiple SVMs. Picture from\cite  {rcnn}.\relax }}{39}{figure.caption.29}\protected@file@percent }
+\citation{fast_rcnn}
+\citation{fast_rcnn}
+\citation{fast_rcnn}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.2}Fast R-CNN}{40}{subsubsection.2.5.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The Fast R-CNN architecture scheme. Instead of repeating CNN applications, the model applies the CNN only once. The proposed regions are being projected to the CNN output, pooled, fed to fully-connected layers and finally passed to the two heads for classification and bounding box regression. Picture from\cite  {fast_rcnn}.\relax }}{40}{figure.caption.30}\protected@file@percent }
+\citation{faster_rcnn}
+\citation{faster_rcnn}
+\citation{faster_rcnn}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.3}Faster R-CNN}{41}{subsubsection.2.5.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Left: The Faster R-CNN architecture brief scheme. The RPN slides over the backbone output and utilises the extracted features to propose regions. The proposed regions are then being processed similarly to Fast R-CNN. Right: The RPN application example. On a certain position for each of $k$ anchor shapes it predicts $2k$ values for "objectness" score (is there any object or not), and $4k$ values for bounding box regression relative to the anchor boundaries. Pictures from \cite  {faster_rcnn}.\relax }}{41}{figure.caption.31}\protected@file@percent }
+\citation{mask_rcnn}
+\citation{mask_rcnn}
+\citation{mask_rcnn}
+\citation{bilinear_interpolation}
+\citation{mask_rcnn}
+\citation{bilinear_interpolation}
+\citation{mask_rcnn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Architecture Details}{43}{subsection.2.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces The Mask R-CNN architecture. Note the additional convolutional layer sequence predicting the masks and the RoI Align layer. Picture from\cite  {mask_rcnn}.\relax }}{43}{figure.caption.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3.1}RoI Align}{43}{subsubsection.2.5.3.1}\protected@file@percent }
+\citation{feature_pyramid_nets}
+\citation{mask_rcnn}
+\citation{feature_pyramid_nets}
+\citation{mask_rcnn}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Left: Bilinear interpolation illustration. To interpolate the point, the four neighbours are needed. The interpolation is being computed along the one axis firstly (producing points $R_1$ and $R_2$), and then along another (using $R_1$ and $R_2$), resulting in three linear interpolations. Right: RoI Align example. The solid line represents the proposed region being pooled, while the stroke line delimits the backbone output. Each pooling bin has got four sampling points, each of which gets a bilinearly interpolated values of the feature map pixels. The pooling is being applied on sampling points, not on feature map pixels. Pictures from \cite  {bilinear_interpolation} and \cite  {mask_rcnn} respectively.\relax }}{44}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3.2}Mask Predictor Head}{45}{subsubsection.2.5.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces The proposed mask predictors for ResNet and Feature Pyramid Network\cite  {feature_pyramid_nets} backbones respectively. Arrows denote either convolution, deconvolution or fully-connected layers as can be inferred from context. All convolutions are $3 \times 3$, except the output convolution which is $1 \times 1$. Deconvolutions are $2 \times 2$ with stride 2, all layers use ReLU non-linearity. Picture from\cite  {mask_rcnn}.\relax }}{45}{figure.caption.34}\protected@file@percent }
+\citation{synapse_ra2}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {3}Practial Part}{47}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Task Recapitulation}{47}{section.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Regions for which erosion or narrowing needs to be assessed. Left: erosion regions. Right: narrowing regions.\relax }}{48}{figure.caption.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Dataset Overview}{48}{section.3.2}\protected@file@percent }
+\citation{matterport_maskrcnn_2017}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Label values distribution in log scale. Note that for some labels only 1-31 labels are available.\relax }}{49}{figure.caption.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}The Approach}{49}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Joint Extraction}{49}{subsection.3.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Example images of a left hand and a right foot from the dataset.\relax }}{50}{figure.caption.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Data Preparation}{50}{subsubsection.3.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}Training and Results}{51}{subsubsection.3.3.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The selected training plots of the detection models. Note the absence of noticeable validation loss degradation during training.\relax }}{52}{figure.caption.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Damage Assessment}{52}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.1}Data Preparation}{52}{subsubsection.3.3.2.1}\protected@file@percent }
+\citation{specialized_dropouts}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.2}The Model}{53}{subsubsection.3.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.3}Training and Results}{54}{subsubsection.3.3.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Left: validation results. Right: test results. The tested models include variant one and two trained with 30 and 45 degress image augmentation. The fifth model is a V.2 with 30-degree augmentation initialized with CIFAR-pretrained weights.\relax }}{55}{figure.caption.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Discussion}{55}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Joint Extraction}{56}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Damage Assessment}{57}{subsection.3.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Oversampling and combined approach illustrated.\relax }}{57}{figure.caption.40}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Left: different loss functions illustrated. Right: their derivatives.\relax }}{59}{figure.caption.41}\protected@file@percent }
+\bibstyle{iso690}
+\bibdata{mybibliographyfile}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{Conclusion}{61}{chapter*.42}\protected@file@percent }
+\bibcite{cs231n}{1}
+\bibcite{nn-svg}{2}
+\bibcite{dropout}{3}
+\bibcite{vgg}{4}
+\bibcite{batchnorm}{5}
+\bibcite{going_deeper}{6}
+\bibcite{resnet}{7}
+\bibcite{densenet}{8}
+\bibcite{splash_of_color}{9}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{63}{chapter*.43}\protected@file@percent }
+\bibcite{rcnn}{10}
+\bibcite{fast_rcnn}{11}
+\bibcite{faster_rcnn}{12}
+\bibcite{mask_rcnn}{13}
+\bibcite{bilinear_interpolation}{14}
+\bibcite{feature_pyramid_nets}{15}
+\bibcite{ra_ultrasound}{16}
+\bibcite{ra_computer_aided}{17}
+\bibcite{dl_ra}{18}
+\bibcite{machine_learning}{19}
+\bibcite{theoretical_ml}{20}
+\bibcite{overfitting}{21}
+\bibcite{how_transferable}{22}
+\bibcite{unet}{23}
+\bibcite{simonyan2013deep}{24}
+\bibcite{fan2020interpretability}{25}
+\bibcite{McCulloch43}{26}
+\bibcite{hebb-organization-of-behavior-1949}{27}
+\bibcite{nn_zoo}{28}
+\bibcite{softmax}{29}
+\bibcite{universal_approx_wiki}{30}
+\bibcite{nndl_universal_approx}{31}
+\bibcite{chain_rule}{32}
+\bibcite{sparse_rectifier}{33}
+\bibcite{wiki_relu}{34}
+\bibcite{lecun_generalization}{35}
+\bibcite{LeCunBoserDenkerEtAl89}{36}
+\bibcite{hubel1962receptive}{37}
+\bibcite{zfnet}{38}
+\bibcite{alexnet}{39}
+\bibcite{covariate_shift}{40}
+\bibcite{exploding_gradient}{41}
+\bibcite{xavier_init}{42}
+\bibcite{he_init}{43}
+\bibcite{efficient_backprop}{44}
+\bibcite{learning_representations}{45}
+\bibcite{nesterov}{46}
+\bibcite{adagrad}{47}
+\bibcite{rmsprop}{48}
+\bibcite{adam}{49}
+\bibcite{stochastic_depth}{50}
+\bibcite{highway_net}{51}
+\bibcite{identity_mappings}{52}
+\bibcite{specialized_dropouts}{53}
+\bibcite{synapse_ra2}{54}
+\bibcite{matterport_maskrcnn_2017}{55}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {appendix}{\chapternumberline {A}Acronyms}{69}{appendix.A}\protected@file@percent }
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {appendix}{\chapternumberline {B}Example Training Plot}{71}{appendix.B}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Training plot for a second model variant trained from scratch on 30-degree augmented images\relax }}{72}{figure.caption.44}\protected@file@percent }
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {appendix}{\chapternumberline {C}Contents of enclosed CD}{73}{appendix.C}\protected@file@percent }
+\memsetcounter{lastsheet}{90}
+\memsetcounter{lastpage}{74}

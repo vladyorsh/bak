@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BP_Yorsh_Uladzislau_2020.aux
+The style file: iso690.bst
+Database file #1: mybibliographyfile.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in cs231n
+Warning--empty year in cs231n
+Warning--empty journal in vgg
+Warning--empty booktitle in ra_computer_aided
+Warning--empty journal in theoretical_ml
+You've used 55 entries,
+            3146 wiz_defined-function locations,
+            995 strings with 15871 characters,
+and the built_in function-call counts, 25471 in all, are:
+= -- 1932
+> -- 941
+< -- 49
++ -- 483
+- -- 273
+* -- 1498
+:= -- 3031
+add.period$ -- 164
+call.type$ -- 55
+change.case$ -- 253
+chr.to.int$ -- 0
+cite$ -- 60
+duplicate$ -- 2359
+empty$ -- 2139
+format.name$ -- 315
+if$ -- 5446
+int.to.chr$ -- 0
+int.to.str$ -- 55
+missing$ -- 607
+newline$ -- 210
+num.names$ -- 114
+pop$ -- 1248
+preamble$ -- 1
+purify$ -- 232
+quote$ -- 0
+skip$ -- 933
+stack$ -- 0
+substring$ -- 713
+swap$ -- 1338
+text.length$ -- 49
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 214
+warning$ -- 5
+while$ -- 147
+width$ -- 57
+write$ -- 550
+(There were 5 warnings)

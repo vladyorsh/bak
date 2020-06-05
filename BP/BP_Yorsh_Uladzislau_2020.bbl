@@ -1,0 +1,303 @@
+\begin{thebibliography}{10}
+\providecommand{\biburl}[1]{\url{#1}}
+\providecommand{\urlprefix}{Available from: }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\biburl{#2}}
+
+\bibitem{cs231n}
+Li, F.-F.; Karpathy, A.; et al. CS231n: Convolutional Neural Networks for
+  Visual Recognition 2016.
+\urlprefix\biburl{http://cs231n.stanford.edu/}
+
+\bibitem{nn-svg}
+Lenail, A. NN-SVG. \url{http://alexlenail.me/NN-SVG/index.html}, accessed:
+  28.04.2020.
+
+\bibitem{dropout}
+Srivastava, N.; Hinton, G.; et al. Dropout: A Simple Way to Prevent Neural
+  Networks from Overfitting. \emph{Journal of Machine Learning Research},
+  volume~15, no.~56, 2014: pp. 1929--1958.
+\urlprefix\biburl{http://jmlr.org/papers/v15/srivastava14a.html}
+
+\bibitem{vgg}
+Simonyan, K.; Zisserman, A. Very Deep Convolutional Networks for Large-Scale
+  Image Recognition. 2014, cite arxiv:1409.1556.
+\urlprefix\biburl{http://arxiv.org/abs/1409.1556}
+
+\bibitem{batchnorm}
+Ioffe, S.; Szegedy, C. Batch Normalization: Accelerating Deep Network Training
+  by Reducing Internal Covariate Shift. \emph{CoRR}, volume abs/1502.03167,
+  2015, \eprint{1502.03167}.
+\urlprefix\biburl{http://arxiv.org/abs/1502.03167}
+
+\bibitem{going_deeper}
+Szegedy, C.; Liu, W.; et al. Going Deeper with Convolutions. \emph{CoRR},
+  volume abs/1409.4842, 2014, \eprint{1409.4842}.
+\urlprefix\biburl{http://arxiv.org/abs/1409.4842}
+
+\bibitem{resnet}
+He, K.; Zhang, X.; et al. Deep Residual Learning for Image Recognition.
+  \emph{CoRR}, volume abs/1512.03385, 2015, \eprint{1512.03385}.
+\urlprefix\biburl{http://arxiv.org/abs/1512.03385}
+
+\bibitem{densenet}
+Huang, G.; Liu, Z.; et al. Densely Connected Convolutional Networks.
+  \emph{CoRR}, volume abs/1608.06993, 2016, \eprint{1608.06993}.
+\urlprefix\biburl{http://arxiv.org/abs/1608.06993}
+
+\bibitem{splash_of_color}
+Abdulla, W. Splash of Color: Instance Segmentation with Mask R-CNN and
+  TensorFlow. March 2018, [Online; posted 20-March-2018].
+\urlprefix\biburl{https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46}
+
+\bibitem{rcnn}
+Girshick, R.~B.; Donahue, J.; et al. Rich feature hierarchies for accurate
+  object detection and semantic segmentation. \emph{CoRR}, volume
+  abs/1311.2524, 2013, \eprint{1311.2524}.
+\urlprefix\biburl{http://arxiv.org/abs/1311.2524}
+
+\bibitem{fast_rcnn}
+Girshick, R.~B. Fast {R-CNN}. \emph{CoRR}, volume abs/1504.08083, 2015,
+  \eprint{1504.08083}.
+\urlprefix\biburl{http://arxiv.org/abs/1504.08083}
+
+\bibitem{faster_rcnn}
+Ren, S.; He, K.; et al. Faster {R-CNN:} Towards Real-Time Object Detection with
+  Region Proposal Networks. \emph{CoRR}, volume abs/1506.01497, 2015,
+  \eprint{1506.01497}.
+\urlprefix\biburl{http://arxiv.org/abs/1506.01497}
+
+\bibitem{mask_rcnn}
+He, K.; Gkioxari, G.; et al. Mask {R-CNN}. \emph{CoRR}, volume abs/1703.06870,
+  2017, \eprint{1703.06870}.
+\urlprefix\biburl{http://arxiv.org/abs/1703.06870}
+
+\bibitem{bilinear_interpolation}
+{Wikipedia contributors}. Bilinear interpolation --- {Wikipedia}{,} The Free
+  Encyclopedia.
+  \url{https://en.wikipedia.org/w/index.php?title=Bilinear_interpolation&oldid=957374633},
+  2020, [Online; accessed 1-June-2020].
+
+\bibitem{feature_pyramid_nets}
+Lin, T.; Doll{\'{a}}r, P.; et al. Feature Pyramid Networks for Object
+  Detection. \emph{CoRR}, volume abs/1612.03144, 2016, \eprint{1612.03144}.
+\urlprefix\biburl{http://arxiv.org/abs/1612.03144}
+
+\bibitem{ra_ultrasound}
+J.K.H., A.; J.S., P.; et al. Neural networks for automatic scoring of arthritis
+  disease activity on ultrasound images. \emph{RMD Open}, 05 2019,
+  \doi{doi:10.1136/rmdopen-2018-000891}.
+\urlprefix\biburl{https://rmdopen.bmj.com/content/rmdopen/5/1/e000891.full.pdf}
+
+\bibitem{ra_computer_aided}
+Morita, K.; Tashita, A.; et al. Computer-aided diagnosis system for Rheumatoid
+  Arthritis using machine learning. 07 2017, pp. 357--360,
+  \doi{10.1109/ICMLC.2017.8108947}.
+
+\bibitem{dl_ra}
+Hirano, T.; Nishide, M.; et al. {Development and validation of a deep-learning
+  model for scoring of radiographic finger joint destruction in rheumatoid
+  arthritis}. \emph{Rheumatology Advances in Practice}, volume~3, no.~2, 11
+  2019, ISSN 2514-1775, \doi{10.1093/rap/rkz047}, rkz047,
+  \eprint{https://academic.oup.com/rheumap/article-pdf/3/2/rkz047/31569737/rkz047.pdf}.
+\urlprefix\biburl{https://doi.org/10.1093/rap/rkz047}
+
+\bibitem{machine_learning}
+Mitchell, T. \emph{Machine Learning}. McGraw Hill, 1997, ISBN 0070428077.
+\urlprefix\biburl{http://www.cs.cmu.edu/~tom/mlbook.html}
+
+\bibitem{theoretical_ml}
+Awasthi, P.; Kumar, N. Theoretical Machine Learning. 2017.
+\urlprefix\biburl{https://www.cs.rutgers.edu/~pa336/mlt_f17/lec-1.pdf}
+
+\bibitem{overfitting}
+Hawkins, D. The Problem of Overfitting. \emph{Journal of chemical information
+  and computer sciences}, volume~44, 05 2004: pp. 1--12,
+  \doi{10.1021/ci0342472}.
+
+\bibitem{how_transferable}
+Yosinski, J.; Clune, J.; et al. How transferable are features in deep neural
+  networks? \emph{CoRR}, volume abs/1411.1792, 2014, \eprint{1411.1792}.
+\urlprefix\biburl{http://arxiv.org/abs/1411.1792}
+
+\bibitem{unet}
+Ronneberger, O.; Fischer, P.; et al. U-Net: Convolutional Networks for
+  Biomedical Image Segmentation. \emph{CoRR}, volume abs/1505.04597, 2015,
+  \eprint{1505.04597}.
+\urlprefix\biburl{http://arxiv.org/abs/1505.04597}
+
+\bibitem{simonyan2013deep}
+Simonyan, K.; Vedaldi, A.; et al. Deep Inside Convolutional Networks:
+  Visualising Image Classification Models and Saliency Maps. 2013,
+  \eprint{1312.6034}.
+
+\bibitem{fan2020interpretability}
+Fan, F.; Xiong, J.; et al. On Interpretability of Artificial Neural Networks.
+  2020, \eprint{2001.02522}.
+
+\bibitem{McCulloch43}
+McCulloch, W.~S.; Pitts, W. A Logical Calculus of the Idea Immanent in Nervous
+  Activity. \emph{Bulletin of Mathematical Biophysics}, volume~5, 1943: pp.
+  115--133.
+
+\bibitem{hebb-organization-of-behavior-1949}
+Hebb, D.~O. \emph{The organization of behavior: {A} neuropsychological theory}.
+  New York: Wiley, June 1949, ISBN 0-8058-4300-0.
+
+\bibitem{nn_zoo}
+van Veen, F. Neural Network Zoo.
+  \url{https://www.asimovinstitute.org/neural-network-zoo/}, accessed:
+  28.04.2020.
+
+\bibitem{softmax}
+{Wikipedia contributors}. Softmax function --- {Wikipedia}{,} The Free
+  Encyclopedia.
+  \url{https://en.wikipedia.org/w/index.php?title=Softmax_function&oldid=951108453},
+  2020, [Online; accessed 28-April-2020 ].
+
+\bibitem{universal_approx_wiki}
+{Wikipedia contributors}. Universal approximation theorem --- {Wikipedia}{,}
+  The Free Encyclopedia. 2020, [Online; accessed 28-April-2020 ].
+\urlprefix\biburl{https://en.wikipedia.org/w/index.php?title=Universal_approximation_theorem&oldid=945920534}
+
+\bibitem{nndl_universal_approx}
+Nielsen, M.~A. \emph{Neural Networks and Deep Learning}. Determination Press,
+  2015.
+\urlprefix\biburl{http://neuralnetworksanddeeplearning.com}
+
+\bibitem{chain_rule}
+{Wikipedia contributors}. Chain rule --- {Wikipedia}{,} The Free Encyclopedia.
+  2020, [Online; accessed 29-April-2020 ].
+\urlprefix\biburl{https://en.wikipedia.org/w/index.php?title=Chain_rule&oldid=950737064}
+
+\bibitem{sparse_rectifier}
+Glorot, X.; Bordes, A.; et al. Deep Sparse Rectifier Neural Networks. In
+  \emph{AISTATS}, \emph{JMLR Proceedings}, volume~15, edited by G.~J. Gordon;
+  D.~B. Dunson; M.~Dudík, JMLR.org, 2011, pp. 315--323.
+\urlprefix\biburl{http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf}
+
+\bibitem{wiki_relu}
+{Wikipedia contributors}. Rectifier (neural networks) --- {Wikipedia}{,} The
+  Free Encyclopedia. 2020, [Online; accessed 29-April-2020 ].
+\urlprefix\biburl{https://en.wikipedia.org/w/index.php?title=Rectifier_(neural_networks)&oldid=952377033}
+
+\bibitem{lecun_generalization}
+Lecun, Y. Generalization and network design strategies. Technical report,
+  Department of Computer Science, University of Toronto, 1989.
+
+\bibitem{LeCunBoserDenkerEtAl89}
+LeCun, Y.; Boser, B.; et al. Backpropagation Applied to Handwritten Zip Code
+  Recognition. \emph{Neural Computation}, volume~1, 1989: pp. 541--551.
+
+\bibitem{hubel1962receptive}
+Hubel, D.; Wiesel, T. Receptive fields, binocular interaction, and functional
+  architecture in the cat's visual cortex. \emph{Journal of Physiology}, volume
+  160, 1962: pp. 106--154.
+
+\bibitem{zfnet}
+Zeiler, M.~D.; Fergus, R. Visualizing and Understanding Convolutional Networks.
+  \emph{CoRR}, volume abs/1311.2901, 2013, \eprint{1311.2901}.
+\urlprefix\biburl{http://arxiv.org/abs/1311.2901}
+
+\bibitem{alexnet}
+Krizhevsky, A.; Sutskever, I.; et al. ImageNet Classification with Deep
+  Convolutional Neural Networks. In \emph{Advances in Neural Information
+  Processing Systems 25}, edited by F.~Pereira; C.~J.~C. Burges; L.~Bottou;
+  K.~Q. Weinberger, Curran Associates, Inc., 2012, pp. 1097--1105.
+\urlprefix\biburl{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+
+\bibitem{covariate_shift}
+Shimodaira, H. Improving predictive inference under covariate shift by
+  weighting the log-likelihood function. \emph{Journal of Statistical Planning
+  and Inference}, volume~90, 10 2000: pp. 227--244,
+  \doi{10.1016/S0378-3758(00)00115-4}.
+
+\bibitem{exploding_gradient}
+Philipp, G.; Song, D.; et al. Gradients explode - Deep Networks are shallow -
+  ResNet explained. \emph{CoRR}, volume abs/1712.05577, 2017,
+  \eprint{1712.05577}.
+\urlprefix\biburl{http://arxiv.org/abs/1712.05577}
+
+\bibitem{xavier_init}
+Glorot, X.; Bengio, Y. Understanding the difficulty of training deep
+  feedforward neural networks. In \emph{Proceedings of the Thirteenth
+  International Conference on Artificial Intelligence and Statistics},
+  \emph{Proceedings of Machine Learning Research}, volume~9, edited by Y.~W.
+  Teh; M.~Titterington, Chia Laguna Resort, Sardinia, Italy: PMLR, 13--15 May
+  2010, pp. 249--256.
+\urlprefix\biburl{http://proceedings.mlr.press/v9/glorot10a.html}
+
+\bibitem{he_init}
+He, K.; Zhang, X.; et al. Delving Deep into Rectifiers: Surpassing Human-Level
+  Performance on ImageNet Classification. \emph{CoRR}, volume abs/1502.01852,
+  2015, \eprint{1502.01852}.
+\urlprefix\biburl{http://arxiv.org/abs/1502.01852}
+
+\bibitem{efficient_backprop}
+LeCun, Y.; Bottou, L.; et al. Efficient BackProp. In \emph{Neural Networks:
+  Tricks of the Trade (2nd ed.)}, \emph{Lecture Notes in Computer Science},
+  volume 7700, edited by G.~Montavon; G.~B. Orr; K.-R. Müller, Springer, 2012,
+  ISBN 978-3-642-35288-1, pp. 9--48.
+
+\bibitem{learning_representations}
+Rumelhart, D.~E.; Hinton, G.~E.; et al. {Learning Representations by
+  Back-propagating Errors}. \emph{Nature}, volume 323, no. 6088, 1986: pp.
+  533--536, \doi{10.1038/323533a0}.
+\urlprefix\biburl{http://www.nature.com/articles/323533a0}
+
+\bibitem{nesterov}
+Nesterov, Y.~E. A method for solving the convex programming problem with
+  convergence rate $O(1/k^2)$. \emph{Dokl. Akad. Nauk SSSR}, volume 269, 1983:
+  pp. 472--547.
+\urlprefix\biburl{https://ci.nii.ac.jp/naid/10029946121/en/}
+
+\bibitem{adagrad}
+Duchi, J.; Hazan, E.; et al. Adaptive subgradient methods for online learning
+  and stochastic optimization. \emph{Journal of Machine Learning Research},
+  volume~12, no. Jul, 2011: pp. 2121--2159.
+
+\bibitem{rmsprop}
+Tieleman, T.; Hinton, G. {Lecture 6.5---RmsProp: Divide the gradient by a
+  running average of its recent magnitude}. COURSERA: Neural Networks for
+  Machine Learning, 2012.
+
+\bibitem{adam}
+Kingma, D.~P.; Ba, J. Adam: A Method for Stochastic Optimization. 2014, cite
+  arxiv:1412.6980Comment: Published as a conference paper at the 3rd
+  International Conference for Learning Representations, San Diego, 2015.
+\urlprefix\biburl{http://arxiv.org/abs/1412.6980}
+
+\bibitem{stochastic_depth}
+Huang, G.; Sun, Y.; et al. Deep Networks with Stochastic Depth. \emph{CoRR},
+  volume abs/1603.09382, 2016, \eprint{1603.09382}.
+\urlprefix\biburl{http://arxiv.org/abs/1603.09382}
+
+\bibitem{highway_net}
+Srivastava, R.~K.; Greff, K.; et al. Training Very Deep Networks. \emph{CoRR},
+  volume abs/1507.06228, 2015, \eprint{1507.06228}.
+\urlprefix\biburl{http://arxiv.org/abs/1507.06228}
+
+\bibitem{identity_mappings}
+He, K.; Zhang, X.; et al. Identity Mappings in Deep Residual Networks.
+  \emph{CoRR}, volume abs/1603.05027, 2016, \eprint{1603.05027}.
+\urlprefix\biburl{http://arxiv.org/abs/1603.05027}
+
+\bibitem{specialized_dropouts}
+Wan, K.; Feng, B.; et al. Reconciling Feature-Reuse and Overfitting in DenseNet
+  with Specialized Dropout. \emph{CoRR}, volume abs/1810.00091, 2018,
+  \eprint{1810.00091}.
+\urlprefix\biburl{http://arxiv.org/abs/1810.00091}
+
+\bibitem{synapse_ra2}
+{University of Alabama at Birmingham}; {IBM}; et al. RA2 DREAM Challenge. 2020,
+  \url{https://www.synapse.org/#!Synapse:syn20545111/wiki/594083}, Last
+  accessed on 04.06.2020.
+
+\bibitem{matterport_maskrcnn_2017}
+Abdulla, W. Mask R-CNN for object detection and instance segmentation on Keras
+  and TensorFlow. \url{https://github.com/matterport/Mask_RCNN}, 2017.
+
+\end{thebibliography}
