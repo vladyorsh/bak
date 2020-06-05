@@ -1,4 +1,4 @@
-###Detecting abnormalities in X-Ray images using Neural Networks
+### Detecting abnormalities in X-Ray images using Neural Networks
 
 ------------
 
