@@ -9,6 +9,7 @@ This repository includes:
 - The bachelor work LaTeX sources with images
 - Docker container files
 - Training logs and several example images
+- Manual annotations used for joint detectors training
 
 What this repository does not include:
 - The data. They have to be downloaded from the RA2 Challange page by a registered user
@@ -27,5 +28,5 @@ How to build the docker container:
 According to the wiki pages, the scoring container will be publically available after the challenge end.
 
 Notes about notebooks:
-- Public data sets were changed multiple times during the challenge. Notebooks dedicated to detection models refer to some distinct files, which may be absent in new publicly available sets. If a certain file is missing, remove it from the 'force_train' list in the notebook.
+- Public data sets were changed multiple times during the challenge. Notebooks dedicated to detection models refer to some distinct files through .json label files and 'force_train' lists, and certain files may be absent in new publicly available sets.
 - Detection models notebooks refer to the aligned data sets (with right images flipped), not to the original ones.
